@@ -1,0 +1,19 @@
+[
+  {
+    "titulo": "Lanzamiento de la nueva web",
+    "fecha": "2025-08-01",
+    "descripcion": "Presentamos la nueva versión del sitio con mejoras de diseño y accesibilidad.",
+    "enlace": "https://ejemplo.com/nueva-web"
+  },
+  {
+    "titulo": "Descuento de verano",
+    "fecha": "2025-08-10",
+    "descripcion": "Promoción del 20% en todos los servicios este mes.",
+    "enlace": "https://ejemplo.com/promocion-verano"
+  },
+  {
+    "titulo": "Expansión del equipo",
+    "fecha": "2025-08-15",
+    "descripcion": "Damos la bienvenida a tres nuevos integrantes en el área de desarrollo."
+  }
+]

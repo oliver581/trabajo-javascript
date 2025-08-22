@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presupuesto</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script defer src="../js/presupuesto.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Mi Empresa Creativa</h1>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a class="activo" href="presupuesto.html" aria-current="page">Presupuesto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Solicita tu presupuesto</h2>
+      <form id="formPresupuesto" action="#" method="post" novalidate>
+        <fieldset>
+          <legend>Datos de contacto</legend>
+
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required maxlength="15">
+          <small class="error" id="err-nombre" aria-live="polite"></small>
+
+          <label for="apellidos">Apellidos:</label>
+          <input type="text" id="apellidos" name="apellidos" required maxlength="40">
+          <small class="error" id="err-apellidos" aria-live="polite"></small>
+
+          <label for="telefono">Teléfono:</label>
+          <input type="text" id="telefono" name="telefono" required inputmode="numeric" maxlength="9">
+          <small class="error" id="err-telefono" aria-live="polite"></small>
+
+          <label for="email">Correo electrónico:</label>
+          <input type="text" id="email" name="email" required>
+          <small class="error" id="err-email" aria-live="polite"></small>
+        </fieldset>
+
+        <fieldset>
+          <legend>Configuración del presupuesto</legend>
+          <label for="producto">Producto:</label>
+          <select id="producto" name="producto" required>
+            <option value="" disabled selected>-- Selecciona un producto --</option>
+            <option value="500">Página Web - 500€</option>
+            <option value="800">Tienda Online - 800€</option>
+            <option value="1200">Web + SEO - 1200€</option>
+          </select>
+
+          <label for="plazo">Plazo (meses):</label>
+          <input type="number" id="plazo" name="plazo" min="1" max="12" value="1">
+
+          <p>Extras:</p>
+          <label class="checkbox-label"><input type="checkbox" class="extra" value="100"> Mantenimiento (+100 €)</label>
+          <label class="checkbox-label"><input type="checkbox" class="extra" value="200"> Hosting y dominio (+200 €)</label>
+          <label class="checkbox-label"><input type="checkbox" class="extra" value="150"> Optimización SEO (+150 €)</label>
+
+          <label for="total">Presupuesto total:</label>
+          <input type="text" id="total" name="total" value="Selecciona un producto" readonly>
+        </fieldset>
+
+        <label class="checkbox-label">
+          <input type="checkbox" id="condiciones" name="condiciones" required>
+          Acepto las condiciones de privacidad
+        </label>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>&copy; 2025 Mi Empresa Creativa</p>
+    <p>
+      <a href="privacidad.html">Aviso legal y privacidad</a> ·
+      <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+    </p>
+  </footer>
+</body>
+</html>

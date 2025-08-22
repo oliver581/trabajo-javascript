@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi Empresa Creativa – Inicio</title>
+
+  <!-- Estilos del proyecto (ruta relativa desde la raíz) -->
+  <link rel="stylesheet" href="./css/estilos.css">
+
+  <!-- Meta básicos -->
+  <meta name="description" content="Sitio web de Mi Empresa Creativa: diseño web, desarrollo y marketing.">
+  <meta name="theme-color" content="#000000">
+  <script defer src="./js/index.js"></script>
+</head>
+<body class="inicio">
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="branding">
+      <h1>Mi Empresa Creativa</h1>
+    </div>
+
+    <!-- NAVBAR fija (el CSS del proyecto puede hacerla sticky) -->
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="./index.html" id="link-inicio">Inicio</a></li>
+        <li><a href="./views/galeria.html">Galería</a></li>
+        <li><a href="./views/presupuesto.html">Presupuesto</a></li>
+        <li><a href="./views/contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <!-- Sección 1: HERO / PORTADA -->
+    <section id="portada" class="seccion">
+      <h2>Bienvenido a Mi Empresa Creativa</h2>
+      <p>Diseñamos y desarrollamos experiencias digitales modernas, accesibles y rápidas.</p>
+      <p><a href="./views/presupuesto.html">Pide tu presupuesto</a></p>
+    </section>
+
+    <!-- Sección 2: SERVICIOS -->
+    <section id="servicios" class="seccion">
+      <h2>Servicios</h2>
+      <ul>
+        <li><strong>Diseño web</strong>: sitios a medida y responsive.</li>
+        <li><strong>Desarrollo</strong>: HTML5, CSS3, JavaScript y más.</li>
+        <li><strong>SEO/SEM</strong>: visibilidad y conversión.</li>
+      </ul>
+    </section>
+
+    <!-- Sección 3: NOTICIAS (carga desde JSON/XML) -->
+    <section id="noticias-seccion" class="seccion">
+      <h2>Noticias</h2>
+      <div id="noticias" aria-live="polite">
+        <!-- Se rellenará dinámicamente desde ./data/noticias.json -->
+        <p>Cargando noticias…</p>
+      </div>
+      <noscript>
+        <p>Activa JavaScript para ver las noticias dinámicas.</p>
+      </noscript>
+    </section>
+
+    <!-- Sección 4: EQUIPO / SOBRE NOSOTROS -->
+    <section id="equipo" class="seccion">
+      <h2>Sobre nosotros</h2>
+      <p>Somos un equipo multidisciplinar apasionado por la tecnología y el diseño.</p>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>&copy; 2025 Mi Empresa Creativa</p>
+    <p>
+      <a href="./views/privacidad.html">Aviso legal y privacidad</a> ·
+      <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+    </p>
+  </footer>
+</body>
+</html>

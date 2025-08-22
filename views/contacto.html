@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Mi Empresa Creativa</title>
+
+  <link rel="stylesheet" href="../css/estilos.css">
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <!-- Leaflet Routing Machine -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css">
+
+  <!-- Tu JS de la página (mantiene toda la lógica que ya tenías) -->
+  <script defer src="../js/contacto.js"></script>
+  <!-- Librerías (orden: Leaflet primero, luego Routing Machine) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Mi Empresa Creativa</h1>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="presupuesto.html">Presupuesto</a></li>
+        <li><a class="activo" href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Datos de contacto</h2>
+      <p><strong>Dirección:</strong> Calle Falsa 23, Madrid</p>
+      <p><strong>Teléfono:</strong> 912 345 678 · <strong>Email:</strong> info@miempresa.com</p>
+
+      <!-- Controles del mapa -->
+      <div class="acciones-mapa" role="group" aria-label="Controles del mapa">
+        <button id="btnMiUbicacion" class="modo-btn" type="button" aria-label="Usar mi ubicación" title="Usar mi ubicación">📍</button>
+        <button id="btnAbrirOSM" class="modo-btn" type="button" aria-label="Abrir en OSM" title="Abrir en OSM">🗺️</button>
+        <span id="estado" aria-live="polite"></span>
+      </div>
+
+      <!-- Aviso sobre el mapa -->
+      <p id="instruccionMapa">
+        👉 Haz clic en el mapa para elegir tu ubicación y trazar la ruta
+      </p>
+
+      <!-- Mapa -->
+      <div id="mapa" role="region" aria-label="Mapa con ubicación y ruta"></div>
+    </section>
+
+    <section>
+      <h2>Formulario de contacto</h2>
+      <form id="formContacto" action="#" method="post" novalidate>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required maxlength="15">
+        <small class="error" id="err-nombre" aria-live="polite"></small>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required maxlength="40">
+        <small class="error" id="err-apellidos" aria-live="polite"></small>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required maxlength="9" pattern="^\d{9}$" title="Introduce 9 dígitos">
+        <small class="error" id="err-telefono" aria-live="polite"></small>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <small class="error" id="err-email" aria-live="polite"></small>
+
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios" name="comentarios" rows="4" maxlength="200" required></textarea>
+
+        <label class="checkbox-label">
+          <input type="checkbox" id="condiciones" name="condiciones" required>
+          Acepto la política de privacidad
+        </label>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mi Empresa Creativa</p>
+    <p>
+      <a href="privacidad.html">Aviso legal y privacidad</a> ·
+      <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+    </p>
+  </footer>
+</body>
+</html>

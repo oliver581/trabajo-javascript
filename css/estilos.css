@@ -1,0 +1,220 @@
+/* estilos.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Encabezado */
+header {
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background: #555;
+}
+
+/* Enlace activo (página actual) */
+header nav ul li a.activo,
+header nav ul li a[aria-current="page"],
+header nav ul li a.active { /* 👈 añadida para el index.js */
+  background-color: #0077cc;
+  color: #fff;
+}
+
+/* Contenido principal */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Galería */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.miniatura {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.miniatura:hover {
+  transform: scale(1.05);
+}
+
+/* Contenedor de cada proyecto + pie de foto */
+.proyecto {
+  text-align: center;
+}
+
+.proyecto p {
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Formularios */
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #555;
+}
+
+/* Ajuste específico para checkboxes y radios */
+form input[type="checkbox"],
+form input[type="radio"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+form label.checkbox-label,
+form label.radio-label {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #333;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+  }
+  header nav ul li {
+    margin: 10px 0;
+  }
+}
+
+/* Sticky footer SOLO para portada/galería (añade class="inicio" en <body>) */
+body.inicio {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body.inicio main { flex: 1; }
+
+/* ====== ESTILOS MOVIDOS / CORREGIDOS PARA CONTACTO ====== */
+/* soporta ambos ids por compatibilidad (#map y #mapa) */
+#map, #mapa { height: 400px; width: 100%; }
+
+/* si usas estos controles de acciones encima del mapa */
+.acciones-mapa { 
+  display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; margin: .5rem 0; 
+}
+.modo-btn {
+  width: 44px; height: 44px; border-radius: 999px; border: 1px solid #ddd; background: #fff;
+  display: inline-flex; align-items: center; justify-content: center; font-size: 22px; cursor: pointer;
+  transition: transform .08s ease, box-shadow .08s ease;
+}
+.modo-btn:active { transform: scale(.97); }
+#estado { min-height: 1.2em; font-size: .95rem; }
+#instruccionMapa {
+  background: #f7f7f7; border: 1px solid #ddd; border-radius: 6px;
+  padding: .4rem .6rem; font-size: .9rem; margin: .4rem 0; color: #444;
+}
+
+/* Compatibilidad con una clase antigua que pudieras tener */
+.map-buttons { margin-top: 10px; }
+
+/* ====== ESTILOS MOVIDOS DESDE PRESUPUESTO ====== */
+.error {
+  display: block;
+  font-size: 0.9em;
+  margin-top: .25rem;
+  color: red;
+}
+.is-invalid {
+  border-color: #d00;
+  outline-color: #d00;
+}
